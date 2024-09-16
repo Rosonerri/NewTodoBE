@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 mainApp(app);
-const server = app.listen(port, () => {
-  console.log("App Listening to Port on", port);
+const server = app.listen(2009, () => {
+  console.log("App connected", port);
   dbConfig();
 });
 

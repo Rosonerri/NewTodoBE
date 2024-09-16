@@ -8,13 +8,13 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dbConfig_1 = require("./utils/dbConfig");
 const mainApp_1 = require("./mainApp");
-const port = 3344;
+const port = 2009;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 (0, mainApp_1.mainApp)(app);
-const server = app.listen(port, () => {
-    console.log("App Listening to Port on", port);
+const server = app.listen(2009, () => {
+    console.log("App connected", port);
     (0, dbConfig_1.dbConfig)();
 });
 process.on("uncaughtException", (error) => {
